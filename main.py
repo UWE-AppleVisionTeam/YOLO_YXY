@@ -18,7 +18,7 @@ def train_model():
     # 加载预训练的YOLO模型
     model = YOLO("yolo11n.pt")
 
-    # 指定训练集并训练，批次为3，结果放到runs/detect里面
+    # 指定训练集并训练，批次为20，结果放到runs/detect里面
     model.train(data=dataset_yaml, epochs=20, project="runs/detect", name="apples_train")
 
     return model
